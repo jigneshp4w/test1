@@ -3,14 +3,13 @@ package org.expense.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
-@Entity(name = "user_master")
-public class User {
+@Entity(name="expense_tracker")
+public class ExpenceTracker {
     @Id
     @GeneratedValue
     private int id;
-    private String name;
-    private String email;
-    private String phone;
-    private String memberType;
+    @ManyToOne()
+    private int userId;
 }
